@@ -3,6 +3,7 @@ import sys
 import pygame
 import decimal
 import math
+import datetime
 
 from config_types import *
 from planet import Planet
@@ -48,9 +49,18 @@ def calc_attraction(planet1: Planet, planet2: Planet, planet3: Planet, game_conf
     planet3.vy += fy / planet2.mass * game_config.time_step
 
 
+def draw_time(surface, time_str: str):
+    font = pygame.font.SysFont('hack', 20)
+    text = font.render(time_str, True, (255, 255, 255))
+    text_rect = text.get_rect()
+    surface.blit(text, text_rect)
+
+
 def run(surface: pygame.Surface, game_config: GameConfig):
     planets = init_planets(game_config)
     clock = pygame.time.Clock()
+    current_time = datetime.datetime.now()
+
     while True:
         clock.tick(game_config.fps)
         for event in pygame.event.get():
@@ -70,8 +80,13 @@ def run(surface: pygame.Surface, game_config: GameConfig):
             planet.move(game_config.time_step, game_config.scale)
             print(f"{planet.name} ({planet.x}, {planet.y})")
             planet.draw(surface)
-        print('---')
+
+        draw_time(surface, str(current_time))
         pygame.display.update()
+
+        print("-----")
+        current_time += datetime.timedelta(seconds=game_config.time_step)
+
 
 
 def main():
@@ -82,8 +97,10 @@ def main():
     game_config = GameConfig.parse_file(sys.argv[1])
     game_config.time_step /= game_config.fps
     # decimal.getcontext().prec = 30
-    pygame.init()
 
+    pygame.init()
+    pygame.font.init()
+    pygame.display.set_caption("Simulation!")
     surface = pygame.display.set_mode(
         (game_config.width, game_config.height)
     )

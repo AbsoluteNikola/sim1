@@ -3,9 +3,6 @@ import typing as t
 from pydantic import BaseModel
 
 
-# TODO: think about scaling
-
-
 class PlanetConfig(BaseModel):
     name: str
     vx: int = 0  # initial speed on the x axis (m/s)

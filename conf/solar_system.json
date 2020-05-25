@@ -1,13 +1,13 @@
 {
-  "width": 1280,
-  "height": 720,
+  "width": 1400,
+  "height": 1280,
   "fps": 60,
-  "timeStep": 60,
-  "scale": 1e9,
+  "time_step": 604800,
+  "scale": 5e8,
   "planets": [
     {
       "name": "Sun",
-      "scale": 100,
+      "scale": 10,
       "vx": 0,
       "vy": 0,
       "x": 640,
@@ -18,13 +18,24 @@
     },
     {
       "name": "Earth",
-      "scale": 1000,
-      "vx": 29782,
-      "vy": 0,
+      "scale": 500,
+      "vy": 30000,
+      "vx": 0,
       "angle": 0,
       "dist": 152095566000,
       "radius": 6371000,
       "mass": 5.9726e24,
+      "color": [146, 189, 252]
+    },
+    {
+      "name": "Mercury",
+      "scale": 500,
+      "vy": 30000,
+      "vx": 0,
+      "angle": 0,
+      "dist": 5.4889e10,
+      "radius": 2439700,
+      "mass": 3.33022e23,
       "color": [146, 189, 252]
     }
   ]
