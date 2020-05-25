@@ -3,14 +3,28 @@
   "height": 720,
   "fps": 60,
   "timeStep": 60,
-  "scale": 1,
+  "scale": 1e9,
   "planets": [
     {
-      "name": "Earth",
+      "name": "Sun",
+      "scale": 100,
       "vx": 0,
       "vy": 0,
-      "radius": 0,
-      "mass": 0,
+      "x": 640,
+      "y": 360,
+      "radius": 6.96e8,
+      "mass": 1.9885e30,
+      "color": [204, 154, 47]
+    },
+    {
+      "name": "Earth",
+      "scale": 1000,
+      "vx": 29782,
+      "vy": 0,
+      "angle": 0,
+      "dist": 152095566000,
+      "radius": 6371000,
+      "mass": 5.9726e24,
       "color": [146, 189, 252]
     }
   ]

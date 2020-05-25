@@ -1,0 +1,31 @@
+{
+  "width": 1280,
+  "height": 1280,
+  "fps": 60,
+  "timeStep": 60,
+  "scale": 8e5,
+  "planets": [
+    {
+      "name": "Earth",
+      "scale": 1,
+      "vx": 0,
+      "vy": 0,
+      "x": 640,
+      "y": 360,
+      "radius": 6371000,
+      "mass": 5.9726e24,
+      "color": [146, 189, 252]
+    },
+    {
+      "name": "Moon",
+      "scale": 1,
+      "vx": 0,
+      "vy": 1022,
+      "angle": 0,
+      "dist": 384467000,
+      "radius": 1737100,
+      "mass": 7.3477e22,
+      "color": [130, 122, 122]
+    }
+  ]
+}
