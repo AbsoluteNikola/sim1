@@ -13,6 +13,7 @@ class Planet:
             vx: int = 0,
             vy: int = 0,
             color=t.List[int],
+            draw_path: bool = False,
             **kwargs
     ):
         self._name = name
@@ -23,6 +24,9 @@ class Planet:
         self._vx = vx
         self._vy = vy
         self._color = color
+        self._draw_path = draw_path
+        self._path: t.List[t.Tuple[int, int]] = []
+        self._cnt = 0
 
     def draw(self, surface):
         pygame.draw.circle(
@@ -31,8 +35,18 @@ class Planet:
             (self._x, self._y),
             self._radius
         )
+        for point in self._path:
+            pygame.draw.circle(
+                surface,
+                self._color,
+                (point[0], point[1]),
+                1
+            )
 
     def move(self, time_step: int, scale):
+        if self._cnt % 10 == 0:
+            self._path.append((self._x, self._y))
+        self._cnt += 1
         self.x += self.vx * time_step / scale
         self.y += self.vy * time_step / scale
 

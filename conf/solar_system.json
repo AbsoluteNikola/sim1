@@ -1,7 +1,7 @@
 {
   "width": 1400,
   "height": 1280,
-  "fps": 60,
+  "fps": 180,
   "time_step": 604800,
   "scale": 5e8,
   "planets": [
@@ -25,7 +25,8 @@
       "dist": 152095566000,
       "radius": 6371000,
       "mass": 5.9726e24,
-      "color": [146, 189, 252]
+      "color": [146, 189, 252],
+      "draw_path": true
     },
     {
       "name": "Mercury",
@@ -36,7 +37,20 @@
       "dist": 5.4889e10,
       "radius": 2439700,
       "mass": 3.33022e23,
-      "color": [146, 189, 252]
+      "color": [146, 189, 252],
+      "draw_path": true
+    },
+    {
+      "name": "Venus",
+      "scale": 500,
+      "vy": 35020,
+      "vx": 0,
+      "angle": 0,
+      "dist": 1.08942109e11,
+      "radius": 6051800,
+      "mass": 4.8675e24,
+      "color": [230, 190, 190],
+      "draw_path": true
     }
   ]
 }

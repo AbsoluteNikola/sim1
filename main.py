@@ -88,7 +88,6 @@ def run(surface: pygame.Surface, game_config: GameConfig):
         current_time += datetime.timedelta(seconds=game_config.time_step)
 
 
-
 def main():
     if len(sys.argv) < 2:
         print("First argument should be path to config")

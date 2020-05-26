@@ -11,6 +11,7 @@ class PlanetConfig(BaseModel):
     mass: int  # in kg
     color: t.List[int]  # [R, G, B]
     scale: float  # radius wil be multiplied on it (only for rendering)
+    draw_path: bool = False
     # coordinates on monitor, should be only on main obj in the system
     # all other objects calculates from range and angle to the main obj
     x: t.Optional[int] = None  # in pixels
