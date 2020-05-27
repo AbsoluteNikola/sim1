@@ -1,9 +1,9 @@
 {
   "width": 1400,
   "height": 1280,
-  "fps": 180,
+  "fps": 60,
   "time_step": 604800,
-  "scale": 5e8,
+  "scale": 1e9,
   "planets": [
     {
       "name": "Sun",
@@ -50,6 +50,18 @@
       "radius": 6051800,
       "mass": 4.8675e24,
       "color": [230, 190, 190],
+      "draw_path": true
+    },
+    {
+      "name": "Mars",
+      "scale": 500,
+      "vy": 24130,
+      "vx": 0,
+      "angle": 0,
+      "dist": 2.49232e11,
+      "radius": 3389500,
+      "mass": 6.4171e23,
+      "color": [227, 113, 0],
       "draw_path": true
     }
   ]

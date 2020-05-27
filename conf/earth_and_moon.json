@@ -2,7 +2,7 @@
   "width": 1280,
   "height": 1280,
   "fps": 60,
-  "timeStep": 60,
+  "time_step": 60480,
   "scale": 8e5,
   "planets": [
     {
